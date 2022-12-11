@@ -1,37 +1,47 @@
 console.log("Witam wszystkich, którzy tu zaglądają :)");
 {
-const formElement = document.querySelector(".js-form");
-const amountElement = document.querySelector(".js-amount");
-const currencyElement = document.querySelector(".js-currency");
-const resultElement = document.querySelector(".js-result");
+    const calculateResult = (amount, currency) => {
+        const EUR = "0.22";
+        const SEK = "2.32";
+        const NOK = "2.19";
 
-const calculateResult = (currency) = {
+        if (currency === "EUR") {
+            return (amount * EUR);
+        } else if (currency === "SEK") {
+            return (amount * SEK);
+        } else {
+            return (amount * NOK);
+        }
 
-    if (currency === "EUR") {
-        result = (amount * EUR);
-    } else if (currency === "SEK") {
-        result = (amount * SEK);
-    } else {
-        result = (amount * NOK);
-    }
+    };
+
+    const resultText = (result) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerText = result.toFixed(2);
+        
+    };
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const amountElement = document.querySelector(".js-amount");
+            const currencyElement = document.querySelector(".js-currency");
+
+
+            const currency = currencyElement.value;
+            const amount = +amountElement.value;
+
+            const result = calculateResult(amount, currency);
+            
+            resultText();
+        });
+       
+
+    };
+
+    init();
 
 }
-
-const EUR = "0.22";
-const SEK = "2.32";
-const NOK = "2.19";
-
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const currency = currencyElement.value;
-    const amount = +amountElement.value;
-    let  result;
-
-   
-    resultElement.innerText = result.toFixed(2);
-
-});
-
-}
-
