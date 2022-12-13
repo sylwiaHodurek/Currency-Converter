@@ -18,30 +18,27 @@ console.log("Witam wszystkich, którzy tu zaglądają :)");
     const resultText = (result) => {
         const resultElement = document.querySelector(".js-result");
         resultElement.innerText = result.toFixed(2);
-        
+
     };
 
-    const init = () => {
+    const contain = () => {
+        
         const formElement = document.querySelector(".js-form");
-
         formElement.addEventListener("submit", (event) => {
             event.preventDefault();
 
             const amountElement = document.querySelector(".js-amount");
             const currencyElement = document.querySelector(".js-currency");
 
-
             const currency = currencyElement.value;
             const amount = +amountElement.value;
 
             const result = calculateResult(amount, currency);
-            
-            resultText();
-        });
-       
+            resultText(result);
 
+        });
     };
 
-    init();
+    contain();
 
 }
