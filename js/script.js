@@ -21,8 +21,8 @@ console.log("Witam wszystkich, którzy tu zaglądają :)");
 
     };
 
-    const contain = () => {
-        
+    const init = () => {
+
         const formElement = document.querySelector(".js-form");
         formElement.addEventListener("submit", (event) => {
             event.preventDefault();
@@ -39,6 +39,6 @@ console.log("Witam wszystkich, którzy tu zaglądają :)");
         });
     };
 
-    contain();
+    init();
 
 }
