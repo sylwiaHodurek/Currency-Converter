@@ -12,7 +12,7 @@ If you want to calculate how much you will get e.g. in EUR, just enter your amou
 *Plese note that application is in Polish and convertion is from Polish currency!*
 
 ### Technologies that I've used:
-HTML
-CSS
-Java Script
-BEM
+- HTML
+- CSS
+- Java Script
+- BEM
