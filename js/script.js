@@ -31,11 +31,17 @@
 
     };
 
-    const init = () => {
+    const onFormSubmit = (formElement) => {
 
         const formElement = document.querySelector(".js-form");
         formElement.addEventListener("submit", (event) => {
             event.preventDefault();
+
+        };
+
+        onFormSubmit ();
+
+        const init = () => {
 
             const amountElement = document.querySelector(".js-amount");
             const currencyElement = document.querySelector(".js-currency");
