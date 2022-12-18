@@ -1,5 +1,13 @@
-console.log("Witam wszystkich, którzy tu zaglądają :)");
 {
+    const welcome = () => {
+
+        console.log("Witam wszystkich, którzy tu zaglądają :)");
+    };
+
+    welcome();
+
+
+
     const calculateResult = (amount, currency) => {
         const EUR = "0.22";
         const SEK = "2.32";
