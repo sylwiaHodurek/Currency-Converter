@@ -1,5 +1,5 @@
 # Currency-Converter
-![currencyConverter](images/currencyConnverter.JPG)
+![currencyConverter](gifs/CurrencyConverter.gif)
 
 ### Demo 
 https://sylwiahodurek.github.io/Currency-Converter/
