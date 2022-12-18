@@ -31,28 +31,26 @@
 
     };
 
-    const onFormSubmit = (formElement) => {
+    const onformSubmit = (event) => {
+
+        event.preventDefault();
+
+        const amountElement = document.querySelector(".js-amount");
+        const currencyElement = document.querySelector(".js-currency");
+
+        const currency = currencyElement.value;
+        const amount = +amountElement.value;
+
+        const result = calculateResult(amount, currency);
+        updateResultText(result);
+
+    };
+
+    const init = () => {
 
         const formElement = document.querySelector(".js-form");
-        formElement.addEventListener("submit", (event) => {
-            event.preventDefault();
 
-        };
-
-        onFormSubmit ();
-
-        const init = () => {
-
-            const amountElement = document.querySelector(".js-amount");
-            const currencyElement = document.querySelector(".js-currency");
-
-            const currency = currencyElement.value;
-            const amount = +amountElement.value;
-
-            const result = calculateResult(amount, currency);
-            updateResultText(result);
-
-        });
+        formElement.addEventListener("submit", onformSubmit);
     };
 
     init();
