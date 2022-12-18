@@ -24,8 +24,9 @@
 
     };
 
-    const resultText = (result) => {
+    const updateResultText = (result) => {
         const resultElement = document.querySelector(".js-result");
+
         resultElement.innerText = result.toFixed(2);
 
     };
@@ -43,7 +44,7 @@
             const amount = +amountElement.value;
 
             const result = calculateResult(amount, currency);
-            resultText(result);
+            updateResultText(result);
 
         });
     };
