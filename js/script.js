@@ -9,17 +9,18 @@
 
 
     const calculateResult = (amount, currency) => {
-        const EUR = "0.22";
-        const SEK = "2.32";
-        const NOK = "2.19";
+        const EUR = 0.22;
+        const SEK = 2.32;
+        const NOK = 2.19;
 
-        if (currency === "EUR") {
-            return (amount * EUR);
-        } else if (currency === "SEK") {
-            return (amount * SEK);
-        } else {
-            return (amount * NOK);
-        }
+        switch (currency) {
+            case "EUR":
+                return (amount * EUR);
+            case "SEK":
+                return (amount * SEK);
+            case "NOK":
+                return (amount * NOK);
+        };
 
     };
 
